@@ -1,0 +1,136 @@
+{
+  "front-version": "2.18.0",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "72fa21f2-2041-43fa-a75e-c736b8c59bc1",
+      "lastModified": "2018-07-08T20:46:11.181-04:00",
+      "name": "/v3/selenium"
+    },
+    {
+      "type": "Scenario",
+      "description": "",
+      "id": "adb98eac-02aa-4fb0-9615-9e1a5579ddc3",
+      "lastModified": "2018-07-08T20:24:06.229-04:00",
+      "name": "v3/selenium/browsers",
+      "requestOrder": [
+        "Android Devices",
+        "Request 1"
+      ],
+      "parentId": "72fa21f2-2041-43fa-a75e-c736b8c59bc1"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "retryConfiguration": {
+        "enabled": true,
+        "intervalInSeconds": 10,
+        "retryCount": 3
+      },
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "crossbrowsertesting.com",
+        "path": "/api/v3/selenium/browsers"
+      },
+      "description": "",
+      "id": "9f1f3ae0-fbc8-4ad9-a7e8-088368130045",
+      "lastModified": "2018-07-08T18:09:25.356-04:00",
+      "name": "Request 1",
+      "headers": [],
+      "assertions": [
+        {
+          "comparison": "Equals",
+          "subject": "ResponseStatus",
+          "path": "code",
+          "value": "200"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "adb98eac-02aa-4fb0-9615-9e1a5579ddc3"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "crossbrowsertesting.com",
+        "path": "/api/v3/selenium/browsers"
+      },
+      "id": "c9553f46-a1b8-48b1-bd9f-19118513cd9e",
+      "lastModified": "2018-07-08T20:23:59.474-04:00",
+      "name": "Android Devices",
+      "headers": [],
+      "assertions": [
+        {
+          "comparison": "Contains",
+          "subject": "ResponseBody",
+          "path": "content",
+          "value": "Android"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "adb98eac-02aa-4fb0-9615-9e1a5579ddc3"
+    },
+    {
+      "type": "Context",
+      "id": "8857f7c1-0382-493a-9ccc-00e8eaba2f30",
+      "lastModified": "2018-07-08T20:23:20.528-04:00",
+      "name": "local",
+      "variables": [
+        {
+          "enabled": true,
+          "name": "",
+          "value": ""
+        },
+        {
+          "enabled": true,
+          "name": "",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}
